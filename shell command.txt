@@ -1,0 +1,119 @@
+Welcome to Software Carpentry
+
+We will use this Etherpad to share links and snippets of code, take notes, ask and answer questions, and whatever else comes to mind.
+The page displays a screen with three major parts:
+
+* The left side holds today's notes: please edit these as we go along.
+* The top right side shows the names of users who are logged in: please add your name and pick the color that best reflects your mood and personality.
+* The bottom right is a real time chat window for asking questions of the instructor and your fellow learners.
+
+To start, please add yourself to the attendee list below:
+
+* Daniel Smith (Chemistry, Auburn University)
+* Michelle Berry (Ecology & Evolutionary Biology, University of Michigan)
+
+*Miriam Goodman (Stanford Neuroscience Institute) - Please let me know how this experience fits in with your research needs. Also, I'd love to know what you think about the experience...
+
+* Frank Kanayet (Postdoc Psychology)
+* Sammy Katta (PhD student, Neurosciences)
+* Ali Shariati (Ophthalmology)
+* Molly Lewis (graduate student, Psychology)
+*David Carreon (psychiatry resident)
+Greg Fonzo (postdoc, Psychiatry)
+*Stephanie Hsiang (undergrad Research Assistant, Psychology)
+Mike Stanton (Postdoc, Medicine/SPRC)
+Abhijit Gurjarpadhye (Postdoc)
+Michael Barnett (Lab Manager, Psychology)
+* Wendy Ni (PhD student, Radiology)
+Tristan Li (Postdoc, Neurobiology)
+Steeve Laquitaine (Postdoc, Neuroscience)
+*Lukas Pezawas (Visiting Professor, Psychiatry)
+Emily Sylwestrak (Postdoc, Bioengineering)
+Sylvia Fechner (PostDoc)
+Anping Xia (Staff ENT)
+Joyce Liao (Ophthalmology, faculty)
+Hesam Jahanian (Post-doc, Radiology)
+*Maged Goubran (Postdoc Radiology)
+Brissa Ortega (graduate student, Psychology)
+*JuliaHuemer (Post-Doc, Psychiatry)
+Jesse Gomez (PhD Student, Neurosciences)
+Sheela Crasta (Lab manager, Neurology)
+Dan Madison (Mol Cell Physiology, SNI)
+*bochao Su (staff  Radiology  )
+
+
+
+
+
+
+Shell Lessons:
+*Download "Data" from the SWC website under Shell
+*Unzip data in the folder "SWC"
+*Shell is used to stitch together low level commands
+
+stuck? can't get a 'man' page? try Google "man <your command>"
+
+transposing the notes from the whiteboard to this etherpad:
+mv - "move" a file
+rm - "remove" a file
+rmdir - remove a directory (folder)
+mkdir - make/create a directory (folder)
+cp - copy a file or folder
+pwd - print working directory or shows your current location
+touch - create a new file
+ls - "list" the contents of the working directory
+man - "manual"
+cd - change directory (move to a different folder)
+cat - prints file contents to screen
+
+Shell Tasks:
+1) rename fructorse.dat
+2) move fructose.dat and sucrose.dat to raw directory
+3) make a new directory called backup and copy both .dat files to backup
+4) make a new file in analyzed called sugarscript.s
+
+Shell commands:
+
+one word commands: (do not require arguments, but may take them optionally)
+pwd       prints working directory (where you are in folder hierarchy)
+ls            lists directory
+  ls -F     list directory with indicators for folders vs files
+  ls -a     list directory and all hidden files as well (files/folders beginning with a .)
+  ls -l      lists folder contents as well as additional details (permissions, owners, modified times)
+  ls <foldername>     lists contents of folder relative to current directory you are in
+whoami  prints current username
+uname -n      print name of computer
+
+Search / Help
+man <name of command> (not installed in windows shell by default, use google)
+    - use q to exit
+    - use spacebar and b to move up and down a page at a time
+    - use up and down arrows to move one line at a time
+    
+Create things
+touch <name of file> 
+mkdir <name of directory>
+
+Destroy things
+rm <name of file> 
+rmdir <name of directory>
+
+Move things
+mv <target (file or directory)> <location>
+mv <target> <new name> 
+cp <target file or directory)> <location>
+
+printing:
+cat <name of file> 
+
+
+
+To move a whole folder:
+cp -r Target Destination/
+The slashes are very important here. If we did:
+cp -r Target/ Destination/
+This will instead copy all of the files in Target into Destination.
+The reason for this is the "/" describes the files in the folder while without the "/" this describes the file itself.
+
+If you want to copy large files/directories (hundreds of GBs or more):
+check out the `rsync` command (https://en.wikipedia.org/wiki/Rsync)
